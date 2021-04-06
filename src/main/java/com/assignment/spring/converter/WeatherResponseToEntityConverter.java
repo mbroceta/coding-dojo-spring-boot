@@ -1,6 +1,6 @@
 package com.assignment.spring.converter;
 
-import com.assignment.spring.api.WeatherResponse;
+import com.assignment.spring.response.WeatherResponse;
 import com.assignment.spring.entity.WeatherEntity;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

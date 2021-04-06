@@ -1,6 +1,6 @@
 package com.assignment.spring.service;
 
-import com.assignment.spring.api.WeatherResponse;
+import com.assignment.spring.response.WeatherResponse;
 import com.assignment.spring.converter.WeatherEntityToDTOConverter;
 import com.assignment.spring.converter.WeatherResponseToEntityConverter;
 import com.assignment.spring.dto.WeatherEntityDTO;
