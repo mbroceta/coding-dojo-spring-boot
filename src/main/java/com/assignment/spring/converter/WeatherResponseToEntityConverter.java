@@ -6,7 +6,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WeatherResponseToEntity implements Converter<WeatherResponse, WeatherEntity> {
+public class WeatherResponseToEntityConverter implements Converter<WeatherResponse, WeatherEntity> {
     @Override
     public WeatherEntity convert(WeatherResponse weatherResponse) {
         WeatherEntity weatherEntity = new WeatherEntity();
