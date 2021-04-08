@@ -1,25 +1,28 @@
+# App
+app:
+    name: dojo-app
+
+server:
+  port: 8890
+
 spring:
-  server:
-    port: 8080
+  application:
+    name: weather-service
+  datasource: 
+    url: jdbc:postgresql://localhost:5432/weather 
+    username : postgres 
+    password : root 
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always 
   jpa:
-    database: POSTGRESQL
-    show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-    properties:
-      hibernate:
-        temp:
-          use_jdbc_metadata_defaults: false
     hibernate:
       ddl-auto: update
-
-  datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/testdb
-    username: postgres
-    password: root
-    driverClassName: org.postgresql.Driver
-
-weather:
-  api:
-    url: http://api.openweathermap.org/data/2.5/weather?q={city}&APPID={appid}
-    key: 72512b904481e79530cc66fa9e36ab46
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  show-sql: true 
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQL81Dialect
