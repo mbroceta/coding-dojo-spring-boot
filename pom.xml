@@ -12,6 +12,7 @@
     <artifactId>coding-dojo-spring-boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>coding-dojo-spring-boot</name>
+    <packaging>war</packaging>
     <description>Spring Boot Coding Dojo</description>
 
     <properties>
