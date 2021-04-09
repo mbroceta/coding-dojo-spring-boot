@@ -41,12 +41,6 @@ public class WeatherResponse {
     private Integer id;
     private String name;
     private Integer cod;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+  
 
 }
