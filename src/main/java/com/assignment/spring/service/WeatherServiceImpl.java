@@ -30,12 +30,10 @@ public class WeatherServiceImpl implements WeatherService{
     @Value("${weather.api.url}")
     String apiUrl;
 
-    @Value("${weather.api.key}")
-    String apiKey;
 
     @Override
     public WeatherEntityDTO findByCity(String city) {
-        String url = apiUrl.replace("{city}", city).replace("{appid}", apiKey);
+        String url = apiUrl.replace("{city}", city).replace("{appid}", "b1ff11fb495bac655130946f616b8d70");
         ResponseEntity<WeatherResponse> response = restTemplate.getForEntity(url, WeatherResponse.class);
         WeatherEntity weatherEntity = weatherResponseToEntityConverter.convert(response.getBody());
         return weatherEntityToDTOConverter.convert(weatherRepository.save(weatherEntity));
