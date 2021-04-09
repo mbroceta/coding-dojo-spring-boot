@@ -1,12 +1,13 @@
 package com.assignment.spring.converter;
 
-import com.assignment.spring.response.WeatherResponse;
+import com.assignment.spring.dto.WeatherResponse;
 import com.assignment.spring.entity.WeatherEntity;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
 public class WeatherResponseToEntityConverter implements Converter<WeatherResponse, WeatherEntity> {
+
     @Override
     public WeatherEntity convert(WeatherResponse weatherResponse) {
         WeatherEntity weatherEntity = new WeatherEntity();

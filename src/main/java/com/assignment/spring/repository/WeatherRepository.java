@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface WeatherRepository extends CrudRepository<WeatherEntity, Integer> {
 
-    WeatherEntity findByCity(String city);
 }
