@@ -4,7 +4,8 @@ app:
     
 server:
   port: 8090
-  display-name: coding-dojo-spring-boot
+  servlet:
+    application-display-name: coding-dojo-spring-boot
 spring:
   application:
     name: weather-service
