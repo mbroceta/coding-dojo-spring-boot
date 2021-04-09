@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import com.assignment.spring.Constants;
 
 @Service
 public class WeatherServiceImpl implements WeatherService{
@@ -27,13 +28,11 @@ public class WeatherServiceImpl implements WeatherService{
     @Autowired
     WeatherResponseToEntityConverter weatherResponseToEntityConverter;
 
-    @Value("${weather.api.url}")
-    String apiUrl;
 
 
     @Override
     public WeatherEntityDTO findByCity(String city) {
-        String url = apiUrl.replace("{city}", city).replace("{appid}", "b1ff11fb495bac655130946f616b8d70");
+        String url = Constants.WEATHER_API_URL.replace("{city}", city).replace("{appid}", Constants.APP_ID);
         ResponseEntity<WeatherResponse> response = restTemplate.getForEntity(url, WeatherResponse.class);
         WeatherEntity weatherEntity = weatherResponseToEntityConverter.convert(response.getBody());
         return weatherEntityToDTOConverter.convert(weatherRepository.save(weatherEntity));
