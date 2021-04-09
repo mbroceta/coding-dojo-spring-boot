@@ -3,7 +3,7 @@ app:
     name: dojo-app
 
 server:
-  port: 8890
+  port: 8090
 
 spring:
   application:
