@@ -7,19 +7,22 @@ import com.assignment.spring.entity.WeatherEntity;
 import com.assignment.spring.repository.WeatherRepository;
 import com.assignment.spring.service.WeatherService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-@RequiredArgsConstructor
 public class WeatherServiceImpl implements WeatherService {
 
-    final WeatherRepository weatherRepository;
+    @Autowired
+    WeatherRepository weatherRepository;
 
-    final RestTemplate restTemplate;
+    @Autowired
+    RestTemplate restTemplate;
 
-    final WeatherResponseToEntityConverter weatherResponseToEntityConverter;
+    @Autowired
+    WeatherResponseToEntityConverter weatherResponseToEntityConverter;
 
     public WeatherEntity findByCity(String city) {
         String url = Constants.WEATHER_API_URL.replace("{city}", city).replace("{appid}", Constants.APP_ID);

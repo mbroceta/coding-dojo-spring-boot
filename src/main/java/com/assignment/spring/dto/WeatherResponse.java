@@ -41,6 +41,6 @@ public class WeatherResponse {
     private Integer id;
     private String name;
     private Integer cod;
-  
+
 
 }
