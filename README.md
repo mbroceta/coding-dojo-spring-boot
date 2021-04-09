@@ -1,22 +1,40 @@
 Spring Boot Coding Dojo
 ---
 
-Welcome to the Spring Boot Coding Dojo!
+Welcome to the Spring Boot Coding Dojo! This is a simple application that requests its data from [OpenWeather](https://openweathermap.org/) and stores the result in a database. 
 
-### Introduction
+## Table of contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Installation](#installation)
 
-This is a simple application that requests its data from [OpenWeather](https://openweathermap.org/) and stores the result in a database. The current implementation has quite a few problems making it a non-production ready product.
+### General Info
+This is a simple application that offers the possibility of fetching weather forecasts for a specific city. It requests data from [OpenWeather](https://openweathermap.org/) and stores the result in a database.
 
-### The task
+### Technologies
+Project is created using:
+* Java version: 11.0.10
+* Java Spring Boot version: 2.1.6.RELEASE
+* PostgreSQL version: 10
+* Maven version: 3.8.1
+* Tomcat version: 9.0
+* Jenkins 
 
-As the new engineer leading this project, your first task is to make it production-grade, feel free to refactor any piece
-necessary to achieve the goal.
+### Installation
+To run this project, follow these steps:
 
-### How to deliver the code
+```
+$ cd ../coding-dojo-sping-boot
+$ mvn install
+$ ls target/*.*
+$ java -jar target/coding-dojo-spring-boot.jar
+```
+OR
 
-Please send an email containing your solution with a link to a public repository.
+From local environment: http://localhost:8090/coding-dojo-spring-boot/weather?city=
 
->**DO NOT create a Pull Request with your solution** 
+Type a city name to get the city weather forecast.
 
-### Footnote
-It's possible to generate the API key going to the [OpenWeather Sign up](https://openweathermap.org/appid) page.
+
+
+
