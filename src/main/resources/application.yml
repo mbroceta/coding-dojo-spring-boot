@@ -1,10 +1,10 @@
 # App
 app:
     name: dojo-app
-
+    
 server:
   port: 8090
-
+  display-name: coding-dojo-spring-boot
 spring:
   application:
     name: weather-service
