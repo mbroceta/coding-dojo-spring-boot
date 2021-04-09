@@ -73,7 +73,6 @@ public class WeatherServiceImplTest {
 
     @Test
     public void testFindByCity(){
-        System.out.println("API URL: " + apiUrl);
         String url = apiUrl.replace("{city}", "Novi Sad").replace("{appid}", apiKey);
         when(restTemplate.getForEntity(url, WeatherResponse.class)).thenReturn(response);
 

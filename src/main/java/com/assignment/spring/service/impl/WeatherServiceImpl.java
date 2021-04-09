@@ -6,7 +6,6 @@ import com.assignment.spring.dto.WeatherResponse;
 import com.assignment.spring.entity.WeatherEntity;
 import com.assignment.spring.repository.WeatherRepository;
 import com.assignment.spring.service.WeatherService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
